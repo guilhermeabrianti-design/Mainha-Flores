@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito:wght@300;400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="revel.js" defer></script>
+        
+      <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Trocar o link para o google analytics, no head e no body -->
+      <title>Mainha Flores - Cestas e Presentes</title>
+</head>
+<body>
+<button class="btn-mobile" id="btn-mobile" aria-label="Abrir Menu">
+    <span class="hamburger"></span>
+  </button>
+<nav id="nav" class="nav">
+    <div class="logo-wrap">
+      <div class="logo-main">Mainha</div>
+      <div class="logo-sub">Flores</div>
+      <div class="logo-tagline">Cestas e Presentes</div>
+    </div>
+    <ul>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#ocasioes">Ocasiões</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato" class="nav-cta">Fazer Pedido</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+      <div class="hero-text txt-revel">
+        <div class="eyebrow">Floricultura Artesanal</div>
+        <h1>Flores e cestas<br>feitas com <em>carinho</em><br>pra você</h1>
+        <p class="hero-sub">Arranjos, buquês e cestas de presente selecionados com amor para tornar cada momento especial ainda mais bonito.</p>
+        <div>
+          <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+          <a href="#contato" class="btn-outline">Pedir agora →</a>
+        </div>
+      </div>
+      <div class="hero-visual hero-revel">
+        <div class="floating-tags">
+          <div class="ftag">Rosas</div>
+          <div class="ftag">Orquídeas</div>
+          <div class="ftag">Cestas</div>
+          <div class="ftag">Lírios</div>
+        </div>
+      </div>
+</section>
+
+<!-- <div class="cookie-consent" id="cookie-consent">
+  <p>Este site utiliza cookies para análise de acesso e melhoria da experiência do usuário. 
+    Os dados coletados pelo Google Analytics serão armazenados por até 30 dias. Ao continuar, 
+    você concorda com o uso desses cookies. <a href="politica-de-privacidade.html" target="_blank">
+    Política de Privacidade
+  </a></p>
+  <button id="cookie-accept">Concordo</button>
+</div> -->
+
+  <div class="ticker-wrap" id="ticker-wrap">
+    <div class="ticker-track" id="ticker-track"></div>
+  </div>
+
+
+<section class="catalog" id="catalogo">
+  <div class="section-label">Nosso Catálogo</div>
+  <div class="section-title">Arranjos para cada <em>emoção</em></div>
+  <div class="cat-grid">
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(140deg,#FDEEF2,#E8C4CC)">
+        🌹
+        <div class="card-badge">Mais Pedido</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Buquê de Rosas</div>
+        <div class="card-desc">Rosas frescas selecionadas, disponíveis em diversas cores</div>
+        <div class="card-price">A partir de R$ 89</div>
+      </div>
+      <div class="card-overlay">
+        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+          💬 Pedir no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(140deg,#D6EAEC,#A8CACD)">
+        🌸
+      </div>
+      <div class="card-body">
+        <div class="card-name">Arranjo Primavera</div>
+        <div class="card-desc">Mix colorido de flores da estação com folhagens</div>
+        <div class="card-price">A partir de R$ 120</div>
+      </div>
+      <div class="card-overlay">
+        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+          💬 Pedir no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(140deg,#FFF8E7,#F5E0A0)">
+        🌻
+        <div class="card-badge">Novidade</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Cesta de Girassóis</div>
+        <div class="card-desc">Girassóis alegres em cesta decorada com laço</div>
+        <div class="card-price">A partir de R$ 95</div>
+      </div>
+      <div class="card-overlay">
+        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+          💬 Pedir no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(140deg,#EDF4EE,#B8D8BA)">
+        🎁
+      </div>
+      <div class="card-body">
+        <div class="card-name">Cesta Presente</div>
+        <div class="card-desc">Cesta personalizada com flores, chocolates e mimos</div>
+        <div class="card-price">A partir de R$ 130</div>
+      </div>
+      <div class="card-overlay">
+        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+          💬 Pedir no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(140deg,#EEE8F5,#C4B0D8)">
+        💜
+      </div>
+      <div class="card-body">
+        <div class="card-name">Orquídea em Vaso</div>
+        <div class="card-desc">Orquídea Phalaenopsis em vaso decorado</div>
+        <div class="card-price">A partir de R$ 150</div>
+      </div>
+      <div class="card-overlay">
+        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+          💬 Pedir no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(140deg,#D6EAEC,#7AACB0)">
+        💐
+      </div>
+      <div class="card-body">
+        <div class="card-name">Arranjo Personalizado</div>
+        <div class="card-desc">Monte seu arranjo especial do seu jeito</div>
+        <div class="card-price">Sob consulta</div>
+      </div>
+      <div class="card-overlay">
+        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+          💬 Pedir no WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="occasions oc" id="ocasioes">
+  <div class="section-label">Ocasiões</div>
+  <div class="section-title">A flor certa para<br>cada <em>momento</em></div>
+  <div class="occ-grid">
+    <div class="occ-card">
+      <div class="occ-icon">💍</div>
+      <div class="occ-name">Casamentos</div>
+      <div class="occ-text">Buquês e decoração floral para o grande dia</div>
+    </div>
+    <div class="occ-card">
+      <div class="occ-icon">🎂</div>
+      <div class="occ-name">Aniversários</div>
+      <div class="occ-text">Surpreenda com flores e cestas especiais</div>
+    </div>
+    <div class="occ-card">
+      <div class="occ-icon">🌹</div>
+      <div class="occ-name">Namorados</div>
+      <div class="occ-text">Declare seu amor com flores selecionadas</div>
+    </div>
+    <div class="occ-card">
+      <div class="occ-icon">🎀</div>
+      <div class="occ-name">Presentes</div>
+      <div class="occ-text">Cestas e mimos para qualquer ocasião</div>
+    </div>
+  </div>
+</section>
+
+<div class="testi-wrap" id="depoimentos">
+  <div class="testi-left tl">
+    <div class="section-label">Depoimentos</div>
+    <div class="section-title" style="margin-bottom:0">O que dizem<br>nossas <em>clientes</em></div>
+  </div>
+  <div class="testi-right tr">
+    <div class="tcard">
+      <div class="stars">★★★★★</div>
+      <div class="ttext">"As flores chegaram lindíssimas e muito frescas. A cesta personalizada superou todas as minhas expectativas!"</div>
+      <div class="tauthor">— Ana Clara · Casamento</div>
+    </div>
+    <div class="tcard">
+      <div class="stars">★★★★★</div>
+      <div class="ttext">"Pedi via WhatsApp e foi super fácil. Entrega pontual, arranjo perfeito. Minha mãe amou a surpresa!"</div>
+      <div class="tauthor">— Renata M. · Aniversário</div>
+    </div>
+  </div>
+</div>
+
+<div class="wa-section ws" id="contato">
+  <div class="wa-inner">
+    <div class="section-label">Faça seu Pedido</div>
+    <div class="section-title" style="font-size:2.3rem">Peça pelo WhatsApp,<br>é <em>rápido e fácil</em></div>
+    <p class="wa-desc">Tire suas dúvidas, escolha seu arranjo ou cesta e agende a entrega. Atendimento personalizado com muito carinho.</p>
+    <div class="wa-number">(13) 99168-3109</div>
+    <a href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" class="btn-wa">💬 Chamar no WhatsApp</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Mainha Flores</div>
+  <div>G2 Creative · © 2026s</div>
+  <div>Feito com 🌸 e carinho</div>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
