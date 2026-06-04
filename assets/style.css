@@ -135,9 +135,11 @@ h1 em{font-style:italic;
     align-items:center;
     justify-content:center;
     overflow:hidden;
-     background-image: url('img/flower\ \(1\).jpg');
+     background-image: url('img/flower.jpg');
       height: 100%;
-       width: 100%;}
+       width: 100%;
+      background-size: cover;
+    }
 
 .hero-emoji-wrap{position:relative;
     z-index:1;
