@@ -5,5 +5,5 @@ revelar.reveal('.txt-revel', {duration: 1500, distance: '90px', origin: 'left', 
 revelar.reveal('.card', {duration: 1500, distance: '90px', origin: 'bottom', interval: 200})
 revelar.reveal('.oc', {duration: 2500, distance: '90px', origin: 'bottom', interval: 200})
 revelar.reveal('.tl', {duration: 2500, distance: '90px', origin: 'bottom', interval: 200})
-revelar.reveal('.tr', {duration: 2500, distance: '90px', origin: 'bottom', delay: 500})
-revelar.reveal('.ws', {duration: 1500, distance: '90px', origin: 'bottom', interval: 200})
+revelar.reveal('.tr', {duration: 2500, distance: '90px', origin: 'bottom', delay: 400})
+revelar.reveal('.ws', {duration: 1500, distance: '80px', origin: 'bottom', interval: 200})

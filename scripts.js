@@ -20,12 +20,12 @@
 
    render(items);
 
-  // Controle de velocidade via JS
+  // Controle de velocidade 
   function setSpeed(seconds) {
     document.getElementById("ticker-track").style.animationDuration = seconds + "s";
   }
 
-  // Pausar/retomar via JS
+  // Pausar/retomar 
   function pause() {
     document.getElementById("ticker-track").style.animationPlayState = "paused";
   }
@@ -34,7 +34,7 @@
     document.getElementById("ticker-track").style.animationPlayState = "running";
   }
 
-// Cookies 
+// Cookies  
 
 document.getElementById('cookie-accept').addEventListener('click', function() {
     localStorage.setItem('cookiesAccepted', 'true');
