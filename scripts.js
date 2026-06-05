@@ -54,15 +54,3 @@ document.getElementById('cookie-accept').addEventListener('click', function() {
 
 //  menu mobile
 
-// Seleciona os elementos no DOM
-const btnMobile = document.getElementById('btn-mobile');
-const nav = document.getElementById('nav');
-
-function toggleMenu() {
-  // Alterna a classe 'active' nos elementos
-  nav.classList.toggle('active');
-  btnMobile.classList.toggle('active');
-}
-
-// Adiciona o evento de clique ao botão
-btnMobile.addEventListener('click', toggleMenu);

@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="assets/style.css">
       <script src="https://unpkg.com/scrollreveal"></script>
       <script src="revel.js" defer></script>
+      <script src="scripts.js"></script>
         
       <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -22,22 +23,28 @@
       <title>Mainha Flores - Cestas e Presentes</title>
 </head>
 <body>
-<button class="btn-mobile" id="btn-mobile" aria-label="Abrir Menu">
-    <span class="hamburger"></span>
+<nav id="nav" role="navigation" aria-label="Menu principal">
+  <div class="logo-wrap">
+    <div class="logo-main">Mainha</div>
+    <div class="logo-sub">Flores</div>
+    <div class="logo-tagline">Cestas e Presentes</div>
+  </div>
+
+  <button class="btn-mobile" id="btn-mobile"
+    aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
   </button>
-<nav id="nav" class="nav">
-    <div class="logo-wrap">
-      <div class="logo-main">Mainha</div>
-      <div class="logo-sub">Flores</div>
-      <div class="logo-tagline">Cestas e Presentes</div>
-    </div>
-    <ul>
-      <li><a href="#catalogo">Catálogo</a></li>
-      <li><a href="#ocasioes">Ocasiões</a></li>
-      <li><a href="#depoimentos">Depoimentos</a></li>
-      <li><a href="#contato" class="nav-cta">Fazer Pedido</a></li>
-    </ul>
+
+  <ul id="nav-links" role="list">
+    <li><a href="#catalogo">Catálogo</a></li>
+    <li><a href="#ocasioes">Ocasiões</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#contato" class="nav-cta">Fazer Pedido</a></li>
+  </ul>
 </nav>
+
 
 <section class="hero">
       <div class="hero-text txt-revel">
@@ -85,133 +92,142 @@
 <section class="catalog" id="catalogo">
   <div class="section-label">Nosso Catálogo</div>
   <div class="section-title">Arranjos para cada <em>emoção</em></div>
-  <div class="cat-grid">
+    <div class="cat-grid">
 
-    <div class="card">
-      <div class="card-img" style="background:linear-gradient(140deg,#FDEEF2,#E8C4CC)">
-        🌹
-        <div class="card-badge">Mais Pedido</div>
-      </div>
-      <div class="card-body">
-        <div class="card-name">Buquê de Rosas</div>
-        <div class="card-desc">Rosas frescas selecionadas, disponíveis em diversas cores</div>
-        <div class="card-price">A partir de R$ 89</div>
-      </div>
-      <div class="card-overlay">
-        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
-          💬 Pedir no WhatsApp
+        
+          <a class="card" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+
+            <div class="card-img" style="background:linear-gradient(140deg,#FDEEF2,#E8C4CC)">
+              <img src="assets/img/Red roses bouquet.jfif" alt="Buquê de Rosas Vermelhas - Mainha Flores">
+              <span class="card-badge">Mais Pedido</span>
+            </div>
+            <div class="card-body">
+              <div class="card-name">Buquê de Rosas</div>
+            <div class="card-desc">Rosas frescas selecionadas, disponíveis em diversas cores</div>
+            <div class="card-price">A partir de R$ 89</div>
+          </div>
+          <div class="card-overlay">
+            <span class="card-wa-btn">
+              💬 Pedir no WhatsApp
+            </span>
+          </div>
+          </a>
+
+         <a class="card" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+
+           <div class="card-img" style="background:linear-gradient(140deg,#D6EAEC,#A8CACD)">
+             <img src="assets/img/download (8).jfif" alt="Arranjo Primavera - Mainha flores">
+            </div>
+            <div class="card-body">
+              <div class="card-name">Arranjo Primavera</div>
+              <div class="card-desc">Mix colorido de flores da estação com folhagens</div>
+              <div class="card-price">A partir de R$ 120</div>
+            </div>
+            <div class="card-overlay">
+              <span class="card-wa-btn">
+                💬 Pedir no WhatsApp
+              </span>
+            </div>
+          </a>
+        
+         <a class="card" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+
+           <div class="card-img" style="background:linear-gradient(140deg,#FFF8E7,#F5E0A0)">
+             <img src="assets/img/Arreglo de Girasol.jfif" alt="Cesta de Girassóis - mainha flores">
+             <div class="card-badge">Novidade</div>
+            </div>
+            
+            <div class="card-body">
+              <!-- Usar h3 ajuda o robô do Google a entender o nome do produto -->
+              <h3 class="card-name">Cesta de Girassóis</h3>
+              <p class="card-desc">Girassóis alegres em cesta decorada com laço</p>
+              <div class="card-price">A partir de R$ 95</div>
+            </div>
+            
+            <div class="card-overlay">
+              <span class="card-wa-btn">
+                💬 Pedir no WhatsApp
+              </span>
+            </div>
+          </a>
+
+        <a class="card" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+          <div class="card-img" style="background:linear-gradient(140deg,#EDF4EE,#B8D8BA)">
+            <img src="assets/img/download (9).jfif" alt="">
+          </div>
+          <div class="card-body">
+            <div class="card-name">Cesta Presente</div>
+            <div class="card-desc">Cesta personalizada com flores, chocolates e mimos</div>
+            <div class="card-price">A partir de R$ 130</div>
+          </div>
+          <div class="card-overlay">
+            <span class="card-wa-btn">
+              💬 Pedir no WhatsApp
+            </span>
+          </div>
+        </a>
+      
+      
+        <a class="card" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
+          <div class="card-img" style="background:linear-gradient(140deg,#EEE8F5,#C4B0D8)">
+            <img src="assets/img/download (10).jfif" alt="">
+          </div>
+          <div class="card-body">
+            <div class="card-name">Orquídea em Vaso</div>
+            <div class="card-desc">Orquídea Phalaenopsis em vaso decorado</div>
+            <div class="card-price">A partir de R$ 150</div>
+          </div>
+          <div class="card-overlay">
+            <span class="card-wa-btn">
+              💬 Pedir no WhatsApp
+            </span>
+          </div>
+        </a>
+      
+
+      
+        <a class="card" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">    
+          <div class="card-img" style="background:linear-gradient(140deg,#D6EAEC,#7AACB0)">
+            💐
+          </div>
+          <div class="card-body">
+            <div class="card-name">Arranjo Personalizado</div>
+            <div class="card-desc">Monte seu arranjo especial do seu jeito</div>
+            <div class="card-price">Sob consulta</div>
+          </div>
+          <div class="card-overlay">
+            <span class="card-wa-btn">
+              💬 Pedir no WhatsApp
+              </span>
+          </div>
         </a>
       </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img" style="background:linear-gradient(140deg,#D6EAEC,#A8CACD)">
-        🌸
-      </div>
-      <div class="card-body">
-        <div class="card-name">Arranjo Primavera</div>
-        <div class="card-desc">Mix colorido de flores da estação com folhagens</div>
-        <div class="card-price">A partir de R$ 120</div>
-      </div>
-      <div class="card-overlay">
-        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
-          💬 Pedir no WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img" style="background:linear-gradient(140deg,#FFF8E7,#F5E0A0)">
-        🌻
-        <div class="card-badge">Novidade</div>
-      </div>
-      <div class="card-body">
-        <div class="card-name">Cesta de Girassóis</div>
-        <div class="card-desc">Girassóis alegres em cesta decorada com laço</div>
-        <div class="card-price">A partir de R$ 95</div>
-      </div>
-      <div class="card-overlay">
-        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
-          💬 Pedir no WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img" style="background:linear-gradient(140deg,#EDF4EE,#B8D8BA)">
-        🎁
-      </div>
-      <div class="card-body">
-        <div class="card-name">Cesta Presente</div>
-        <div class="card-desc">Cesta personalizada com flores, chocolates e mimos</div>
-        <div class="card-price">A partir de R$ 130</div>
-      </div>
-      <div class="card-overlay">
-        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
-          💬 Pedir no WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img" style="background:linear-gradient(140deg,#EEE8F5,#C4B0D8)">
-        💜
-      </div>
-      <div class="card-body">
-        <div class="card-name">Orquídea em Vaso</div>
-        <div class="card-desc">Orquídea Phalaenopsis em vaso decorado</div>
-        <div class="card-price">A partir de R$ 150</div>
-      </div>
-      <div class="card-overlay">
-        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
-          💬 Pedir no WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img" style="background:linear-gradient(140deg,#D6EAEC,#7AACB0)">
-        💐
-      </div>
-      <div class="card-body">
-        <div class="card-name">Arranjo Personalizado</div>
-        <div class="card-desc">Monte seu arranjo especial do seu jeito</div>
-        <div class="card-price">Sob consulta</div>
-      </div>
-      <div class="card-overlay">
-        <a class="card-wa-btn" href="https://wa.me/5513991683109?text=Oi!%20Vim%20pelo%20site%20da%20Mainha%20Flores%20e%20gostaria%20de%20fazer%20um%20pedido%20%F0%9F%8C%B8" target="_blank">
-          💬 Pedir no WhatsApp
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
 <section class="occasions oc" id="ocasioes">
   <div class="section-label">Ocasiões</div>
   <div class="section-title">A flor certa para<br>cada <em>momento</em></div>
   <div class="occ-grid ">
-    <div class="occ-card">
+    <a class="occ-card card-revel" href="#contato">
       <div class="occ-icon"><img src="assets/img/Garden party tablescape, elegance with floral table decor stock photo.jfif" alt=""></div>
       <div class="occ-name">Casamentos</div>
       <div class="occ-text">Buquês e decoração floral para o grande dia</div>
-    </div>
-    <div class="occ-card">
+    </a>
+    <a class="occ-card card-revel" href="#contato">
       <div class="occ-icon"><img src="assets/img/download (4).jfif" alt=""></div>
       <div class="occ-name">Aniversários</div>
       <div class="occ-text">Surpreenda com flores e cestas especiais</div>
-    </div>
-    <div class="occ-card">
+    </a>
+    <a class="occ-card card-revel" href="#contato">
       <div class="occ-icon"><img src="assets/img/download (6).jfif" alt=""></div>
       <div class="occ-name">Namorados</div>
       <div class="occ-text">Declare seu amor com flores selecionadas</div>
-    </div>
-    <div class="occ-card">
+    </a>
+    <a class="occ-card card-revel" href="#contato">
       <div class="occ-icon"><img src="assets/img/download (7).jfif" alt=""></div>
       <div class="occ-name">Presentes</div>
       <div class="occ-text">Cestas e mimos para qualquer ocasião</div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -222,12 +238,12 @@
     <div class="section-title" style="margin-bottom:0">O que dizem<br>nossas <em>clientes</em></div>
   </div>
   <div class="testi-right tr">
-    <div class="tcard">
+    <div class="tcard tc">
       <div class="stars">★★★★★</div>
       <div class="ttext">"As flores chegaram lindíssimas e muito frescas. A cesta personalizada superou todas as minhas expectativas!"</div>
       <div class="tauthor">— Ana Clara · Casamento</div>
     </div>
-    <div class="tcard">
+    <div class="tcard tc">
       <div class="stars">★★★★★</div>
       <div class="ttext">"Pedi via WhatsApp e foi super fácil. Entrega pontual, arranjo perfeito. Minha mãe amou a surpresa!"</div>
       <div class="tauthor">— Renata M. · Aniversário</div>
@@ -250,6 +266,36 @@
   <div>G2 Creative · © 2026s</div>
   <div>Feito com 🌸 e carinho</div>
 </footer>
-<script src="scripts.js"></script>
+<script>
+const btn = document.getElementById('btn-mobile');
+const links = document.getElementById('nav-links');
+const overlay = document.getElementById('overlay');
+let isOpen = false;
+
+function openMenu(){
+  isOpen = true;
+  btn.classList.add('active');
+  links.classList.add('open');
+  overlay.classList.add('active');
+  btn.setAttribute('aria-expanded','true');
+  btn.setAttribute('aria-label','Fechar menu');
+  document.body.style.overflow='hidden';
+}
+
+function closeMenu(){
+  isOpen = false;
+  btn.classList.remove('active');
+  links.classList.remove('open');
+  overlay.classList.remove('active');
+  btn.setAttribute('aria-expanded','false');
+  btn.setAttribute('aria-label','Abrir menu');
+  document.body.style.overflow='';
+}
+
+btn.addEventListener('click', ()=> isOpen ? closeMenu() : openMenu());
+overlay.addEventListener('click', closeMenu);
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+document.addEventListener('keydown', e => { if(e.key==='Escape' && isOpen) closeMenu(); });
+</script>
 </body>
 </html>

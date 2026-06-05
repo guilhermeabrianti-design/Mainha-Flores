@@ -25,7 +25,8 @@ nav{display:flex;
 .logo-wrap{display:flex;
     flex-direction:column;
     align-items:flex-start}
-.logo-main{font-family:'Cormorant Garamond',serif;
+.logo-main{
+    font-family:'Cormorant Garamond',serif;
     font-size:1.7rem;
     font-weight:400;
     font-style:italic;
@@ -55,6 +56,36 @@ nav ul a{text-decoration:none;
 
 nav ul a:hover{color:var(--teal-dark)}
 
+.btn-mobile{
+  display:none;
+  background:none;border:none;cursor:pointer;
+  padding:8px;border-radius:8px;
+  flex-direction:column;justify-content:center;align-items:center;
+  gap:5px;width:44px;height:44px;
+  transition:background 0.2s;
+  position:relative;z-index:300;
+}
+.btn-mobile:hover{background:var(--teal-pale)}
+.btn-mobile span{
+  display:block;width:22px;height:2px;background:var(--teal-dark);
+  border-radius:2px;
+  transition:transform 0.35s cubic-bezier(.4,0,.2,1),
+             opacity 0.25s,
+             width 0.3s;
+  transform-origin:center;
+}
+.btn-mobile.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.btn-mobile.active span:nth-child(2){opacity:0;width:0}
+.btn-mobile.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,0.35);z-index:150;
+  opacity:0;transition:opacity 0.3s;
+  backdrop-filter:blur(2px);
+}
+.overlay.active{opacity:1}
+
 .nav-cta{background:var(--teal);
     color:var(--white)!important;
     padding:0.55rem 1.4rem;
@@ -65,7 +96,8 @@ nav ul a:hover{color:var(--teal-dark)}
 
 .hero{display:grid;
     grid-template-columns:1fr 1fr;
-    min-height:88vh}
+    min-height:82vh
+}
 .hero-text{display:flex;
     flex-direction:column;
     justify-content:center;
@@ -204,20 +236,32 @@ section.catalog{padding:5rem 4.5rem;
     grid-template-columns:repeat(3,1fr);
     gap:1.2rem}
 
-.card{background:var(--bg);border-radius:12px;
+.card{
+    background:var(--bg);
+    border-radius:12px;
     overflow:hidden;
+    text-decoration:none;
     transition:transform 0.3s,box-shadow 0.3s;
-    cursor:pointer}
+    cursor:pointer;
+    color: inherit;
+}
 
 .card:hover{transform:translateY(-4px);
     box-shadow:0 12px 32px rgba(122,172,176,0.2)}
 
-.card-img{aspect-ratio:3/4;
+.card-img {
+    aspect-ratio:3/4;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:5rem;
-    position:relative}
+    position:relative;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta e encaixa a foto perfeitamente na proporção */
+    object-position: center; /* Mantém o centro do buquê visível */
+}
 
 .card-badge{position:absolute;
     top:0.8rem;
@@ -262,8 +306,9 @@ section.occasions{padding:5rem 4.5rem;
     text-align:center;
     border-bottom:1.5px solid var(--teal);
     transition:all 0.3s;
-    cursor:pointer
-
+    cursor:pointer;
+    text-decoration: none;
+    color: inherit;
 }
 .occ-card img{
     width: 100%;
@@ -284,13 +329,20 @@ section.occasions{padding:5rem 4.5rem;
     justify-content:center
 }
 
-.occ-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--script);
-    font-weight:400}
+.occ-name {
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.05rem;
+    color:var(--script);
+    font-weight:400;
+    margin-top:0.8rem;
+}
 
-.occ-text{font-size:0.72rem;
+.occ-text{
+    font-size:0.72rem;
     color:var(--muted);
     margin-top:0.4rem;
-    line-height:1.7}
+    line-height:1.7;
+}
 
 .testi-wrap{
     display:grid;
@@ -468,6 +520,7 @@ footer{background:var(--script);
   overflow: hidden;
   border: none;
   mask: linear-gradient(to right, transparent, red 15%, red 85%, transparent);
+  position: relative;
 }
 
 .cookie-consent {
@@ -570,49 +623,47 @@ hamburger {
     transform: scale(1.1);
 }
     @media (max-width: 768px) {
-      .btn-mobile { display: block; }
-      
-      .nav {
-        display: none; 
-        position: absolute;
-        top: 60px; 
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        z-index: 1000;
-      }
-      
-      
-      .nav.active {
-        display: block;
-      }
-    
-      .nav .menu {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-      }
-    
-      /* Animação do botão para transformar em 'X' */
-      .btn-mobile.active .hamburger { background-color: transparent; }
-      .btn-mobile.active .hamburger::before { transform: rotate(45deg) translate(5px, 5px); }
-      .btn-mobile.active .hamburger::after { transform: rotate(-45deg) translate(6px, -6px); }
+      nav{padding:1rem 1.5rem}
+        .btn-mobile{display:flex}
 
-        /* Estilos para o menu móvel */
-        /* banner */
-         
+        nav ul{
+            display:flex;flex-direction:column;gap:0;
+            position:fixed;top:0;right:0;
+            width:min(320px,85vw);height:100dvh;
+            background:var(--white);z-index:200;
+            padding:5rem 2rem 2rem;
+            transform:translateX(100%);
+            transition:transform 0.4s cubic-bezier(.4,0,.2,1);
+            box-shadow:-4px 0 32px rgba(0,0,0,0.12);
+            align-items:flex-start;
+            overflow-y:auto;
+        }
+            nav ul.open{transform:translateX(0)}
+            nav ul li{width:100%;border-bottom:1px solid var(--teal-pale)}
+            nav ul a{
+                display:block;padding:1.1rem 0;font-size:0.78rem;
+                color:var(--muted);width:100%;
+            }
+            nav ul li:last-child{border-bottom:none;padding-top:1.5rem}
+            nav ul li:last-child .nav-cta{
+                display:block;text-align:center;
+                padding:0.9rem;width:100%;
+            }
+            .overlay{display:block}
+    
         .hero {
             grid-template-columns: 1fr;
             text-align: center;
             margin: 0 auto;
             align-items: center;
+            background-color: var(--white);
         }
         .hero-visual {
           display: none;
         }
 
         .hero-text{
-            padding: 2rem;
+            padding: 1.5rem;
             margin: 0 auto;
         }
 
@@ -660,7 +711,7 @@ hamburger {
              margin: 2rem 0;
         }
         .testi-left{
-            padding: 1rem 3rem 1rem 0rem;
+            padding: 2rem 3rem 2rem 0rem;
         }
         .testi-right{
             display: flex;
