@@ -1,38 +1,44 @@
  
 // Esteira horizontal de texto
 
- const items = [
-    "Flores Frescas ✦",
-    "Entrega no Mesmo Dia ✦",
-    "Arranjos Personalizados ✦",
-    "Pedidos via WhatsApp ✦",
-    "Cestas e Presentes ✦"
-  ]
+const items = [
+  "Flores Frescas ✦",
+  "Entrega no Mesmo Dia ✦",
+  "Arranjos Personalizados ✦",
+  "Pedidos via WhatsApp ✦",
+  "Cestas e Presentes ✦"
+];
 
-  function render(items) {
-    const track = document.getElementById("ticker-track");
-    // Duplica os itens para o loop ser contínuo
-    const doubled = [...items, ...items];
-    track.innerHTML = doubled
-      .map(text => `<div class="ticker-item">${text}</div>`)
-      .join("");
-  }
+function render(items) {
+  const track = document.getElementById("ticker-track");
 
-   render(items);
+  if (!track) return;
 
-  // Controle de velocidade 
-  function setSpeed(seconds) {
-    document.getElementById("ticker-track").style.animationDuration = seconds + "s";
-  }
+  const doubled = [...items, ...items];
 
-  // Pausar/retomar 
-  function pause() {
-    document.getElementById("ticker-track").style.animationPlayState = "paused";
-  }
+  track.innerHTML = doubled
+    .map(text => `<div class="ticker-item">${text}</div>`)
+    .join("");
+}
 
-  function resume() {
-    document.getElementById("ticker-track").style.animationPlayState = "running";
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  render(items);
+});
+
+function setSpeed(seconds) {
+  const track = document.getElementById("ticker-track");
+  if (track) track.style.animationDuration = seconds + "s";
+}
+
+function pause() {
+  const track = document.getElementById("ticker-track");
+  if (track) track.style.animationPlayState = "paused";
+}
+
+function resume() {
+  const track = document.getElementById("ticker-track");
+  if (track) track.style.animationPlayState = "running";
+}
 
 // Cookies  
 
